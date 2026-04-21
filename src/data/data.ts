@@ -48,6 +48,8 @@ const categorias: ICategory[] = [
   },
 ];
 
+// Usé non-null assertions `!` en categorias[index] como solución rápida porque las categorías están definidas de forma estática (hardcodeada) en el mismo módulo, con índices conocidos y estables, para evitar refactorizar por ahora.
+
 export const PRODUCTS: Product[] = [
   {
     id: 1,
@@ -59,7 +61,7 @@ export const PRODUCTS: Product[] = [
     stock: 20,
     imagen: "pizza.jpg",
     disponible: true,
-    categorias: [categorias[0]],
+    categorias: [categorias[0]!],
   },
   {
     id: 2,
@@ -71,7 +73,7 @@ export const PRODUCTS: Product[] = [
     stock: 15,
     imagen: "pizza.jpg",
     disponible: true,
-    categorias: [categorias[0]],
+    categorias: [categorias[0]!],
   },
   {
     id: 3,
@@ -83,7 +85,7 @@ export const PRODUCTS: Product[] = [
     stock: 10,
     imagen: "pizza.jpg",
     disponible: true,
-    categorias: [categorias[0]],
+    categorias: [categorias[0]!],
   },
   {
     id: 4,
@@ -95,7 +97,7 @@ export const PRODUCTS: Product[] = [
     stock: 30,
     imagen: "pizza.jpg",
     disponible: true,
-    categorias: [categorias[1]],
+    categorias: [categorias[1]!],
   },
   {
     id: 5,
@@ -107,7 +109,7 @@ export const PRODUCTS: Product[] = [
     stock: 25,
     imagen: "pizza.jpg",
     disponible: true,
-    categorias: [categorias[1]],
+    categorias: [categorias[1]!],
   },
   {
     id: 6,
@@ -119,7 +121,7 @@ export const PRODUCTS: Product[] = [
     stock: 0,
     imagen: "pizza.jpg",
     disponible: false,
-    categorias: [categorias[1]],
+    categorias: [categorias[1]!],
   },
   {
     id: 7,
@@ -131,7 +133,7 @@ export const PRODUCTS: Product[] = [
     stock: 100,
     imagen: "pizza.jpg",
     disponible: true,
-    categorias: [categorias[2]],
+    categorias: [categorias[2]!],
   },
   {
     id: 8,
@@ -143,7 +145,7 @@ export const PRODUCTS: Product[] = [
     stock: 40,
     imagen: "pizza.jpg",
     disponible: true,
-    categorias: [categorias[2]],
+    categorias: [categorias[2]!],
   },
   {
     id: 9,
@@ -155,7 +157,7 @@ export const PRODUCTS: Product[] = [
     stock: 150,
     imagen: "pizza.jpg",
     disponible: true,
-    categorias: [categorias[2]],
+    categorias: [categorias[2]!],
   },
   {
     id: 10,
@@ -167,7 +169,7 @@ export const PRODUCTS: Product[] = [
     stock: 12,
     imagen: "pizza.jpg",
     disponible: true,
-    categorias: [categorias[3]],
+    categorias: [categorias[3]!],
   },
   {
     id: 11,
@@ -179,7 +181,7 @@ export const PRODUCTS: Product[] = [
     stock: 30,
     imagen: "pizza.jpg",
     disponible: true,
-    categorias: [categorias[3]],
+    categorias: [categorias[3]!],
   },
   {
     id: 12,
@@ -191,7 +193,7 @@ export const PRODUCTS: Product[] = [
     stock: 0,
     imagen: "pizza.jpg",
     disponible: false,
-    categorias: [categorias[3]],
+    categorias: [categorias[3]!],
   },
   {
     id: 13,
@@ -203,7 +205,7 @@ export const PRODUCTS: Product[] = [
     stock: 50,
     imagen: "pizza.jpg",
     disponible: true,
-    categorias: [categorias[4]],
+    categorias: [categorias[4]!],
   },
   {
     id: 14,
@@ -215,7 +217,7 @@ export const PRODUCTS: Product[] = [
     stock: 45,
     imagen: "pizza.jpg",
     disponible: true,
-    categorias: [categorias[4]],
+    categorias: [categorias[4]!],
   },
   {
     id: 15,
@@ -227,7 +229,7 @@ export const PRODUCTS: Product[] = [
     stock: 60,
     imagen: "pizza.jpg",
     disponible: true,
-    categorias: [categorias[4]],
+    categorias: [categorias[4]!],
   },
   {
     id: 16,
@@ -239,7 +241,7 @@ export const PRODUCTS: Product[] = [
     stock: 20,
     imagen: "pizza.jpg",
     disponible: true,
-    categorias: [categorias[5]],
+    categorias: [categorias[5]!],
   },
   {
     id: 17,
@@ -251,7 +253,7 @@ export const PRODUCTS: Product[] = [
     stock: 18,
     imagen: "pizza.jpg",
     disponible: true,
-    categorias: [categorias[5]],
+    categorias: [categorias[5]!],
   },
   {
     id: 18,
@@ -263,7 +265,7 @@ export const PRODUCTS: Product[] = [
     stock: 10,
     imagen: "pizza.jpg",
     disponible: true,
-    categorias: [categorias[0]],
+    categorias: [categorias[0]!],
   },
   {
     id: 19,
@@ -275,7 +277,7 @@ export const PRODUCTS: Product[] = [
     stock: 0,
     imagen: "pizza.jpg",
     disponible: false,
-    categorias: [categorias[1]],
+    categorias: [categorias[1]!],
   },
   {
     id: 20,
@@ -287,7 +289,7 @@ export const PRODUCTS: Product[] = [
     stock: 25,
     imagen: "pizza.jpg",
     disponible: true,
-    categorias: [categorias[5]],
+    categorias: [categorias[5]!],
   },
 ]
  

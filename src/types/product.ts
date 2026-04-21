@@ -16,5 +16,13 @@ export interface Product {
   disponible: boolean;
   categorias: ICategory[]; // Un producto puede pertenecer a varias categorías
   eliminado: boolean;
-  createdAt: string; // ISO date string
+  createdAt: string; // formato en ISO date string
+}
+
+export interface CartItem {
+  productId: number;
+  nombre: string;
+  precioUnitario: number;
+  cantidad: number;
+  imagen: string; // URL o ruta de la imagen para mostrar en el carrito
 }
