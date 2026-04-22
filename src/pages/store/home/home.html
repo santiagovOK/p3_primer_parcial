@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Store | Catalogo</title>
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="./home.css" />
+  </head>
+  <body class="store-home">
+    <header class="store-home__topbar store-home__topbar--row">
+      <div class="store-home__brand">
+        <h1 class="store-home__logo">FoodStore</h1>
+      </div>
+
+      <nav class="store-home__menu" aria-label="Navegacion principal">
+        <ul class="store-home__menu-list store-home__menu-list--row">
+          <li class="store-home__menu-item">
+            <a class="store-home__menu-link store-home__menu-link--active" href="./home.html" aria-current="page">
+              Catalogo
+            </a>
+          </li>
+          <li class="store-home__menu-item">
+            <a class="store-home__menu-link" href="../cart/cart.html">
+              Carrito
+              <span class="store-home__cart-count" id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="store-home__layout store-home__layout--row">
+      <aside class="store-home__sidebar" aria-label="Categorias">
+        <h2 class="store-home__sidebar-title">Categorias</h2>
+
+        <nav class="store-home__categories" aria-label="Filtro de categorias">
+          <ul class="store-home__category-list store-home__category-list--col" id="category-list">
+            <li class="store-home__category-item">
+              <button class="store-home__category-btn store-home__category-btn--active" type="button" data-category="all">
+                Todos los productos
+              </button>
+            </li>
+            <li class="store-home__category-item">
+              <button class="store-home__category-btn" type="button" data-category="pizzas">Pizzas</button>
+            </li>
+            <li class="store-home__category-item">
+              <button class="store-home__category-btn" type="button" data-category="hamburguesas">Hamburguesas</button>
+            </li>
+            <li class="store-home__category-item">
+              <button class="store-home__category-btn" type="button" data-category="bebidas">Bebidas</button>
+            </li>
+            <li class="store-home__category-item">
+              <button class="store-home__category-btn" type="button" data-category="postres">Postres</button>
+            </li>
+            <li class="store-home__category-item">
+              <button class="store-home__category-btn" type="button" data-category="empanadas">Empanadas</button>
+            </li>
+            <li class="store-home__category-item">
+              <button class="store-home__category-btn" type="button" data-category="ensaladas">Ensaladas</button>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="store-home__content">
+        <section class="store-home__search">
+          <h2 class="store-home__section-title">Catalogo</h2>
+
+          <form class="store-home__search-form store-home__search-form--row" role="search">
+            <label class="store-home__search-label" for="search-input">Buscar productos</label>
+            <input
+              class="store-home__search-input"
+              id="search-input"
+              type="search"
+              name="q"
+              placeholder="Buscar productos..."
+              autocomplete="off"
+            />
+          </form>
+
+          <p class="store-home__search-feedback" id="search-feedback" aria-live="polite">
+            Mostrando todos los productos
+          </p>
+        </section>
+
+        <section class="store-home__products" aria-label="Listado de productos">
+          <ul class="store-home__product-list store-home__product-list--wrap" id="products-list">
+            <li class="store-home__product-item">
+              <article class="product-card product-card--col">
+                <figure class="product-card__media">
+                  <img class="product-card__image" src="/images/pizza.jpg" alt="Pizza Muzzarella" />
+                </figure>
+
+                <div class="product-card__body product-card__body--col">
+                  <p class="product-card__category">Pizzas</p>
+                  <h3 class="product-card__title">Pizza Muzzarella</h3>
+                  <p class="product-card__description">
+                    Pizza clasica con salsa de tomate y muzzarella derretida
+                  </p>
+                </div>
+
+                <footer class="product-card__footer product-card__footer--row">
+                  <p class="product-card__price">$4.500</p>
+                  <button class="product-card__add-btn" type="button">Agregar</button>
+                </footer>
+              </article>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./home.ts"></script>
+  </body>
+</html>
