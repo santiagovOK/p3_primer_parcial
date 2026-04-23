@@ -1,7 +1,24 @@
 import { PRODUCTS } from "../../../data/data";
 import type { Product } from "../../../types/product";
+import type { CartItem } from "../../../types/product";
 
-// 1.) Estado del carrito
+
+// 1. Referencias a elementos del DOM (mediante id) que se van a usar en la vista.
+
+const cartItemsList = document.getElementById("cart-items-list") as HTMLUListElement | null;
+const cartSubtotal = document.getElementById("cart-subtotal") as HTMLSpanElement | null;
+const cartTotal = document.getElementById("cart-total") as HTMLSpanElement | null;
+const cartContent = document.getElementById("cart-content") as HTMLElement | null;
+const cartEmpty = document.getElementById("cart-empty") as HTMLElement | null;
+const cartCount = document.getElementById("cart-count") as HTMLSpanElement | null;
+const clearCartBtn = document.getElementById("clear-cart-btn") as HTMLButtonElement | null;
+
+// Guard clause para evitar errores silenciosos si cambia el HTML.
+if (!cartItemsList || !cartSubtotal || !cartTotal || !cartContent || !cartEmpty || !cartCount || !clearCartBtn) {
+throw new Error("Faltan elementos del DOM en la vista store/cart.");
+}
+
+// 2. Estado del carrito
 
 // Al igual que en `home.ts`, definimos un tipo para el estado del carrito, que es un objeto donde la clave es el productId y el valor es la cantidad de ese producto en el carrito. No es totalmente necesario, pero ayuda a la claridad del código en próximas etapas del TPI.
 
