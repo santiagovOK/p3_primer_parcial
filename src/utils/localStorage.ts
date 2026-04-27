@@ -40,7 +40,7 @@ export const getCart = (): CartMap => {
       return {};
     }
 
-        // Procesar las entradas del objeto para asegurar datos válidos
+        // Función para procesar las entradas del objeto para asegurar datos válidos
     const safeEntries = Object.entries(parsed as Record<string, unknown>)
 
       // Filtrar solo las entradas con valores numéricos válidos (mayores a 0)
